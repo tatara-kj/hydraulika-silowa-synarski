@@ -90,7 +90,7 @@ export function SiteHeader() {
               onClick={() => setIsOpen(false)}
               className="mt-5 inline-flex min-h-14 items-center justify-center bg-graphite-950 px-5 font-bold text-white"
             >
-              Opisz usterkę — demo
+              Przygotuj zgłoszenie
             </Link>
           </nav>
         </div>

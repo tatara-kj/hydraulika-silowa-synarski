@@ -264,12 +264,12 @@ export function ServiceIntakeWizard() {
     <div className="overflow-hidden border border-steel-200 bg-white shadow-[0_20px_60px_rgba(23,29,34,0.08)]">
       <div className="border-b border-steel-200 bg-[#eaf6fd] p-5 sm:p-6" role="status">
         <div className="flex items-start gap-3">
-          <AlertTriangle aria-hidden="true" className="mt-0.5 shrink-0 text-hydraulic-800" size={21} />
+          <Check aria-hidden="true" className="mt-0.5 shrink-0 text-hydraulic-800" size={21} />
           <div>
-            <p className="font-bold text-graphite-950">Wersja demonstracyjna</p>
+            <p className="font-bold text-graphite-950">Generator opisu zlecenia</p>
             <p className="mt-1 text-sm text-steel-700">
-              Dane i pliki pozostają w tej karcie przeglądarki i nie zostaną wysłane
-              do firmy. Aby zgłosić zlecenie, zadzwoń pod numer {siteConfig.phoneDisplay}.
+              Wypełnij kroki, a na końcu otrzymasz uporządkowaną listę do rozmowy
+              z warsztatem pod numerem {siteConfig.phoneDisplay}.
             </p>
           </div>
         </div>
@@ -515,7 +515,7 @@ export function ServiceIntakeWizard() {
                       <span className="mt-1 text-sm text-steel-600">JPG, PNG, WebP, MP4, MOV · maks. 5 plików · do 50 MB każdy</span>
                     </button>
                     <p className="mt-2 text-xs text-steel-600">
-                      Limit służy tylko sprawnemu podglądowi demo. Zasady produkcyjnego przesyłania plików wymagają backendu.
+                      Pliki służą do lokalnego przygotowania rozmowy i pozostają na tym urządzeniu.
                     </p>
                     <div aria-live="polite">
                       {fileError ? (
@@ -578,8 +578,7 @@ export function ServiceIntakeWizard() {
                     Dane do rozmowy i preferowany termin
                   </h2>
                   <p className="mt-3 max-w-2xl text-steel-700">
-                    To ćwiczenie interfejsu. Termin nie jest rezerwacją i wymaga
-                    telefonicznego potwierdzenia.
+                    Wskaż termin, który chcesz omówić z warsztatem podczas rozmowy.
                   </p>
                   <div className="mt-8 grid gap-5 sm:grid-cols-2">
                     <Field
@@ -671,11 +670,11 @@ export function ServiceIntakeWizard() {
                     <Check aria-hidden="true" size={28} strokeWidth={3} />
                   </div>
                   <h2 id="step-summary" className="mt-5 text-3xl sm:text-4xl">
-                    Podsumowanie jest gotowe — nic nie wysłano
+                    Plan zgłoszenia jest gotowy
                   </h2>
                   <p className="mt-3 max-w-3xl text-steel-700">
-                    Użyj tych informacji jako listy podczas rozmowy telefonicznej. Dane
-                    znikną po odświeżeniu strony lub wybraniu „Zacznij od nowa”.
+                    Użyj tych informacji jako listy podczas rozmowy telefonicznej.
+                    W razie potrzeby wróć do wcześniejszego kroku i uzupełnij dane.
                   </p>
                   <dl className="mt-8 grid gap-px border border-steel-200 bg-steel-200 sm:grid-cols-2">
                     {[
@@ -691,7 +690,7 @@ export function ServiceIntakeWizard() {
                       ["E-mail", data.email || "nie podano"],
                       ["Firma / NIP", [data.company, data.nip ? `NIP ${data.nip}` : ""].filter(Boolean).join(" · ") || "nie podano"],
                       ["Preferowany termin", [data.preferredDate, data.preferredTime].filter(Boolean).join(" · ") || "nie wskazano"],
-                      ["Pliki lokalne", files.length ? `${files.length} — niewysłane` : "nie dodano"],
+                      ["Pliki lokalne", files.length ? `${files.length} — wybrano na tym urządzeniu` : "nie dodano"],
                     ].map(([label, value]) => (
                       <div key={label} className="bg-white p-4 sm:p-5">
                         <dt className="font-data text-xs font-semibold uppercase tracking-[0.12em] text-steel-600">{label}</dt>

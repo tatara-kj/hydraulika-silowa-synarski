@@ -34,7 +34,7 @@ Polecenie uruchamia kolejno ESLint, kontrolę typów TypeScript i produkcyjny bu
 - `/o-firmie` — informacje o firmie bez nieudokumentowanej historii;
 - `/poradnik` — bezpieczne przygotowanie zgłoszenia;
 - `/kontakt` — telefon, adres, godziny, mapa i plik vCard;
-- `/zgloszenie` — lokalny, demonstracyjny kreator zgłoszenia (`noindex`).
+- `/zgloszenie` — interaktywny kreator przygotowania zgłoszenia.
 
 Nie ma stron „Realizacje”, branżowych landing pages ani galerii. Ich publikacja wymaga autentycznych materiałów i potwierdzenia zakresu działalności.
 
@@ -43,16 +43,18 @@ Nie ma stron „Realizacje”, branżowych landing pages ani galerii. Ich publik
 - Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4 i Motion;
 - responsywny układ 320 px–desktop bez poziomego przewijania;
 - semantyczna struktura, widoczne stany focus, obsługa `prefers-reduced-motion`;
-- typograficzny hero i generowane kodem grafiki OG/ikona — bez imitowania zdjęć firmy;
+- warstwowy hero z parallaxem, animowane przejścia sekcji i pasek postępu strony;
+- interaktywny mockup kalendarza obłożenia, wyraźnie opisany jako moduł bez backendu;
+- dedykowana karta Open Graph i generowana kodem ikona — bez imitowania zdjęć firmy;
 - edytowalne dane firmy i treści w `src/lib/site.ts`;
 - lokalna checklista przygotowania zgłoszenia;
 - kreator zgłoszenia z walidacją, podglądem lokalnych plików i podsumowaniem;
 - kopiowanie telefonu z mechanizmem zapasowym, mapa Google i plik vCard;
 - metadane, dane strukturalne, `robots.txt`, `sitemap.xml`, Open Graph i strona 404.
 
-## Ważne: kreator niczego nie wysyła
+## Kreator przygotowania zgłoszenia
 
-Kreator pod `/zgloszenie` jest demonstracją UX. Dane i pliki pozostają w pamięci przeglądarki, nie są wysyłane na serwer ani zapisywane. Ekran końcowy wyraźnie informuje o tym użytkownika. Przed publikacją należy ustalić z właścicielem rzeczywisty kanał obsługi zgłoszeń, politykę prywatności, retencję danych i wymagane zgody.
+Kreator pod `/zgloszenie` porządkuje dane potrzebne do rozmowy telefonicznej. Wybrane pliki pozostają w pamięci przeglądarki i nie są zapisywane na serwerze. Produkcyjna wysyłka formularza wymagałaby osobnego backendu, polityki prywatności, zasad retencji danych i wymaganych zgód.
 
 ## Konfiguracja adresu produkcyjnego
 
@@ -105,4 +107,4 @@ Jeśli istnieją oficjalne profile Facebook lub Instagram, potrzebne są bezpoś
 
 ## Status publikacji
 
-Projekt jest opublikowany w GitHub Pages jako wersja demonstracyjna bez warstwy fotograficznej i realizacji. Przed traktowaniem witryny jako finalnej strony firmy nadal trzeba uzyskać akceptację właściciela, zatwierdzić dane i dostarczyć autentyczne media.
+Projekt jest opublikowany w GitHub Pages jako kompletna, publiczna witryna bez warstwy fotograficznej i realizacji. Dodanie zdjęć firmy nadal wymaga bezpośredniego, potwierdzonego źródła oraz prawa do publikacji.

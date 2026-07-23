@@ -8,7 +8,7 @@ import { services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Usługi hydrauliki siłowej Świebodzin",
   description:
-    "Potwierdzony zakres usług: naprawa hydrauliki siłowej oraz naprawa i produkcja siłowników hydraulicznych w Lubinicku koło Świebodzina.",
+    "Naprawa hydrauliki siłowej oraz naprawa i produkcja siłowników hydraulicznych w Lubinicku koło Świebodzina.",
   alternates: { canonical: "/uslugi" },
 };
 
@@ -17,9 +17,9 @@ export default function ServicesPage() {
     <>
       <PageHero
         current="Usługi"
-        eyebrow="Zakres potwierdzony"
+        eyebrow="Specjalizacja warsztatu"
         title="Usługi hydrauliki siłowej"
-        intro="Publikujemy wyłącznie zakres wynikający z oficjalnych danych firmy. Szczegóły techniczne i możliwość realizacji ustalamy dla konkretnego elementu."
+        intro="Szczegóły techniczne i możliwość realizacji ustalamy dla konkretnej maszyny, układu lub elementu."
       />
       <section className="px-5 py-20 md:px-6 md:py-28 lg:px-8">
         <div className="mx-auto max-w-[1280px]">
@@ -44,11 +44,10 @@ export default function ServicesPage() {
           </div>
           <div className="border-l-4 border-safety-600 bg-[#fff4eb] p-7 sm:p-9">
             <HelpCircle aria-hidden="true" className="text-safety-700" size={29} />
-            <h2 className="mt-6 text-4xl">Czego nie deklarujemy bez potwierdzenia</h2>
+            <h2 className="mt-6 text-4xl">Zakres ustalamy indywidualnie</h2>
             <p className="mt-5 text-steel-700">
-              Publiczne źródła nie potwierdzają obecnie stałego serwisu mobilnego,
-              obsługi 24/7, napraw pomp i rozdzielaczy, zakuwania przewodów, określonego
-              czasu realizacji ani konkretnego obszaru dojazdu.
+              Podczas rozmowy potwierdzimy możliwość wykonania konkretnej pracy, sposób
+              przekazania elementu, potrzebne materiały i dalszy tok postępowania.
             </p>
           </div>
         </div>

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/o-firmie",
     "/poradnik",
     "/kontakt",
+    "/zgloszenie",
   ];
 
   return routes.map((route, index) => ({

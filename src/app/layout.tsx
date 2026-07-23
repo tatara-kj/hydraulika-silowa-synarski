@@ -5,6 +5,7 @@ import {
   IBM_Plex_Sans_Condensed,
 } from "next/font/google";
 import { MobileContactBar } from "@/components/mobile-contact-bar";
+import { ScrollProgress } from "@/components/scroll-progress";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { services, siteConfig, siteUrl } from "@/lib/site";
@@ -49,12 +50,21 @@ export const metadata: Metadata = {
     description:
       "Naprawa hydrauliki siłowej oraz naprawa i produkcja siłowników hydraulicznych w Lubinicku koło Świebodzina.",
     url: "/",
+    images: [
+      {
+        url: `${siteUrl}/og.png`,
+        width: 1731,
+        height: 909,
+        alt: "Hydraulika Siłowa Seweryn Synarski — naprawa hydrauliki i siłowników",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hydraulika siłowa Świebodzin | Seweryn Synarski",
     description:
       "Naprawa hydrauliki siłowej oraz naprawa i produkcja siłowników hydraulicznych.",
+    images: [`${siteUrl}/og.png`],
   },
   robots: { index: true, follow: true },
 };
@@ -97,6 +107,7 @@ export default function RootLayout({
       className={`${plexSans.variable} ${plexCondensed.variable} ${plexMono.variable}`}
     >
       <body className="min-h-screen bg-offwhite-50 text-graphite-950 antialiased">
+        <ScrollProgress />
         <a className="skip-link" href="#main-content">
           Przejdź do treści
         </a>

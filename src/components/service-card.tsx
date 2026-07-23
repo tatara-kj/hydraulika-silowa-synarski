@@ -6,7 +6,7 @@ type Service = (typeof services)[number];
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
-    <article className="group flex h-full flex-col border border-steel-200 bg-white p-6 transition-colors hover:border-hydraulic-600 sm:p-8">
+    <article className="card-lift group flex h-full flex-col border border-steel-200 bg-white p-6 transition-colors hover:border-hydraulic-600 sm:p-8">
       <div className="flex items-center justify-between">
         <span className="font-data text-sm font-semibold text-hydraulic-700">
           {service.number}
