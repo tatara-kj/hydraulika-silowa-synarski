@@ -4,6 +4,8 @@ Wersja online: [https://tatara-kj.github.io/hydraulika-silowa-synarski/](https:/
 
 Wielostronicowa witryna lokalnej firmy zajmującej się hydrauliką siłową. Projekt powstał na podstawie zweryfikowanych danych CEIDG i wizytówki Google oraz z zachowaniem rygoru: bez dopisywania niepotwierdzonych usług, zasięgu, gwarancji, realizacji i opinii.
 
+Szczegółowe porównanie wdrożenia z oboma promptami znajduje się w [`PROMPT_IMPLEMENTATION_AUDIT.md`](PROMPT_IMPLEMENTATION_AUDIT.md).
+
 ## Uruchomienie lokalne
 
 Wymagany jest aktualny Node.js LTS i npm.

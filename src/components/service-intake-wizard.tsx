@@ -49,6 +49,7 @@ type FormData = {
   phone: string;
   email: string;
   company: string;
+  nip: string;
   preferredDate: string;
   preferredTime: string;
 };
@@ -72,6 +73,7 @@ const initialData: FormData = {
   phone: "",
   email: "",
   company: "",
+  nip: "",
   preferredDate: "",
   preferredTime: "",
 };
@@ -86,6 +88,7 @@ function Field({
   error,
   type = "text",
   autoComplete,
+  inputMode,
 }: {
   label: string;
   name: keyof FormData;
@@ -96,6 +99,7 @@ function Field({
   error?: string;
   type?: string;
   autoComplete?: string;
+  inputMode?: "numeric" | "text" | "tel" | "email" | "decimal" | "search" | "url";
 }) {
   const id = useId();
   const errorId = `${id}-error`;
@@ -114,6 +118,7 @@ function Field({
         placeholder={placeholder}
         required={required}
         autoComplete={autoComplete}
+        inputMode={inputMode}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? errorId : undefined}
         onChange={(event) => onChange(name, event.target.value)}
@@ -177,6 +182,9 @@ export function ServiceIntakeWizard() {
       }
       if (data.email && !/^\S+@\S+\.\S+$/.test(data.email)) {
         nextErrors.email = "Sprawdź format adresu e-mail.";
+      }
+      if (data.nip && data.nip.replace(/\D/g, "").length !== 10) {
+        nextErrors.nip = "NIP powinien zawierać 10 cyfr.";
       }
     }
 
@@ -610,6 +618,15 @@ export function ServiceIntakeWizard() {
                       onChange={update}
                       autoComplete="organization"
                     />
+                    <Field
+                      label="NIP (opcjonalnie)"
+                      name="nip"
+                      value={data.nip}
+                      onChange={update}
+                      error={errors.nip}
+                      inputMode="numeric"
+                      placeholder="10 cyfr"
+                    />
                   </div>
                   <div className="mt-8 border border-steel-200 bg-offwhite-50 p-5 sm:p-6">
                     <div className="flex items-start gap-3">
@@ -664,11 +681,15 @@ export function ServiceIntakeWizard() {
                     {[
                       ["Maszyna / element", data.equipmentType],
                       ["Producent / model", [data.manufacturer, data.model].filter(Boolean).join(" · ") || "nie podano"],
+                      ["Oznaczenie komponentu", data.marking || "nie podano"],
                       ["Objawy", data.symptoms],
-                      ["Pilność", data.urgency],
+                      ["Początek objawów", data.symptomStart || "nie podano"],
+                      ["Pilność użytkownika", data.urgency],
                       ["Lokalizacja", data.location],
                       ["Maszyna wyłączona", data.machineStopped],
                       ["Kontakt", `${data.contactName} · ${data.phone}`],
+                      ["E-mail", data.email || "nie podano"],
+                      ["Firma / NIP", [data.company, data.nip ? `NIP ${data.nip}` : ""].filter(Boolean).join(" · ") || "nie podano"],
                       ["Preferowany termin", [data.preferredDate, data.preferredTime].filter(Boolean).join(" · ") || "nie wskazano"],
                       ["Pliki lokalne", files.length ? `${files.length} — niewysłane` : "nie dodano"],
                     ].map(([label, value]) => (

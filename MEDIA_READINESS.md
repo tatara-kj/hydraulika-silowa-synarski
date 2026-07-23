@@ -4,7 +4,7 @@
 
 Data werdyktu: **2026-07-23**
 
-Aktualizacja wdrożeniowa: kompletna wersja bez mediów została zbudowana do lokalnej akceptacji UX i treści. Status publikacyjny pozostaje bez zmian.
+Aktualizacja wdrożeniowa: wersja demonstracyjna bez mediów została zbudowana i opublikowana w GitHub Pages do akceptacji UX oraz treści. Status finalnej publikacji firmowej pozostaje bez zmian.
 
 ### Dlaczego
 
