@@ -1,5 +1,7 @@
 # Hydraulika Siłowa — Seweryn Synarski
 
+Wersja online: [https://tatara-kj.github.io/hydraulika-silowa-synarski/](https://tatara-kj.github.io/hydraulika-silowa-synarski/)
+
 Wielostronicowa witryna lokalnej firmy zajmującej się hydrauliką siłową. Projekt powstał na podstawie zweryfikowanych danych CEIDG i wizytówki Google oraz z zachowaniem rygoru: bez dopisywania niepotwierdzonych usług, zasięgu, gwarancji, realizacji i opinii.
 
 ## Uruchomienie lokalne
@@ -101,4 +103,4 @@ Jeśli istnieją oficjalne profile Facebook lub Instagram, potrzebne są bezpoś
 
 ## Status publikacji
 
-Projekt jest kompletną, działającą wersją bez warstwy fotograficznej i realizacji. Nie jest jeszcze gotowy do publicznej publikacji z powodu braku zatwierdzonych, autentycznych mediów i kilku danych wymagających potwierdzenia. Projekt nie został wdrożony ani wysłany do zdalnego repozytorium.
+Projekt jest opublikowany w GitHub Pages jako wersja demonstracyjna bez warstwy fotograficznej i realizacji. Przed traktowaniem witryny jako finalnej strony firmy nadal trzeba uzyskać akceptację właściciela, zatwierdzić dane i dostarczyć autentyczne media.

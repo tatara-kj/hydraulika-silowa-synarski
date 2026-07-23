@@ -1,3 +1,5 @@
+export const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const siteConfig = {
   name: "Hydraulika Siłowa Seweryn Synarski",
   legalName: "HYDRAULIKA SIŁOWA Seweryn Synarski",
