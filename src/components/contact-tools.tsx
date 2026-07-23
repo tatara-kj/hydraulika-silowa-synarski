@@ -1,5 +1,5 @@
 import { ArrowUpRight, Download, MapPin, Phone } from "lucide-react";
-import { siteConfig } from "@/lib/site";
+import { siteBasePath, siteConfig } from "@/lib/site";
 import { CopyButton } from "./copy-button";
 
 export function ContactTools() {
@@ -34,7 +34,7 @@ export function ContactTools() {
         <ArrowUpRight aria-hidden="true" size={20} />
       </a>
       <a
-        href="/hydraulika-silowa-seweryn-synarski.vcf"
+        href={`${siteBasePath}/hydraulika-silowa-seweryn-synarski.vcf`}
         download
         className="flex min-h-16 items-center justify-between gap-4 bg-hydraulic-700 px-6 font-bold text-white hover:bg-hydraulic-800 sm:px-8"
       >
