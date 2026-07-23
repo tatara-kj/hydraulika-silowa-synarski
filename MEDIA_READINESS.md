@@ -4,6 +4,8 @@
 
 Data werdyktu: **2026-07-23**
 
+Aktualizacja wdrożeniowa: kompletna wersja bez mediów została zbudowana do lokalnej akceptacji UX i treści. Status publikacyjny pozostaje bez zmian.
+
 ### Dlaczego
 
 - Oficjalna wizytówka Google jest potwierdzona, ale zawiera tylko mapę dojazdu i zdjęcie drogi.
