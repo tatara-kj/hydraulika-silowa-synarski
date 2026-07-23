@@ -26,7 +26,7 @@ export function CtaBand() {
             href="/zgloszenie"
             className="inline-flex min-h-14 items-center justify-center gap-3 border border-white/50 px-6 font-bold text-white hover:border-white hover:bg-white/10"
           >
-            Formularz demo
+            Przygotuj zgłoszenie
             <ArrowRight aria-hidden="true" size={19} />
           </Link>
         </div>

@@ -1,11 +1,11 @@
 # Raport QA
 
 Data: **2026-07-23**
-Zakres: produkcyjny build oraz wersja demonstracyjna w GitHub Pages
+Zakres: produkcyjny build oraz publiczna wersja w GitHub Pages
 
 ## Wynik
 
-Wersja demonstracyjna bez mediów przeszła automatyczne kontrole jakości i testy przeglądarkowe podstawowych ścieżek. Nie stwierdzono błędów aplikacji, poziomego przewijania ani brakujących nagłówków H1 na zbudowanych trasach. Publiczne demo może służyć do akceptacji UX i treści; status finalnej strony firmowej pozostaje zablokowany przez brak zatwierdzonych mediów i danych wymagających potwierdzenia.
+Publiczna wersja bez mediów przeszła automatyczne kontrole jakości i testy podstawowych ścieżek. Nie stwierdzono błędów aplikacji, poziomego przewijania ani brakujących nagłówków H1 na zbudowanych trasach. Warstwa fotograficzna pozostaje wstrzymana do czasu uzyskania potwierdzonego źródła i prawa do publikacji.
 
 ## Kontrole automatyczne
 
@@ -13,7 +13,7 @@ Wersja demonstracyjna bez mediów przeszła automatyczne kontrole jakości i tes
 | --- | --- | --- |
 | ESLint | PASS | Brak błędów i ostrzeżeń blokujących |
 | TypeScript `tsc --noEmit` | PASS | Brak błędów typów |
-| Produkcyjny build Next.js | PASS | Wszystkie 14 tras i zasobów wygenerowane |
+| Produkcyjny build Next.js | PASS | Wszystkie 13 tras aplikacji i zasoby statyczne wygenerowane |
 | `git diff --check` | PASS | Brak błędów białych znaków w zmianach |
 | Audyt zależności | PASS | `npm audit` nie wykrywa podatności; przechodnia wersja `postcss` została bezpiecznie ujednolicona przez override |
 
@@ -54,4 +54,4 @@ Semantyczne elementy formularzy, widoczne style focus, reguły CSS dla ograniczo
 
 ## Bramka publikacyjna
 
-`MEDIA_READINESS.md` ma status **BLOCKED**. Nie użyto zdjęć stockowych, wygenerowanych realizacji ani materiałów z Google bez potwierdzonej zgody. Hero fotograficzne, galeria i case studies zostały celowo pominięte. Publiczna wersja demonstracyjna służy do akceptacji UX i treści, ale nie powinna być traktowana jako finalna strona firmy przed dostarczeniem autentycznych mediów, potwierdzeniem danych i wykonaniem testów ręcznych wymienionych wyżej.
+`MEDIA_READINESS.md` ma status **BLOCKED** wyłącznie dla fotografii, galerii i case studies. Nie użyto zdjęć stockowych, wygenerowanych realizacji ani materiałów bez potwierdzonej zgody. Publiczna strona działa bez tej warstwy; autentyczne media można dodać po potwierdzeniu źródła i prawa do publikacji.

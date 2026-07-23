@@ -61,12 +61,12 @@ export default function ContactPage() {
               <div className="md:col-span-8">
                 <h2 className="text-4xl">Chcesz uporządkować dane przed rozmową?</h2>
                 <p className="mt-4 text-steel-700">
-                  Demonstracyjny formularz tworzy lokalne podsumowanie. Niczego nie wysyła i nie rezerwuje terminu.
+                  Kreator prowadzi krok po kroku przez dane maszyny, objawy, lokalizację i preferowany termin kontaktu.
                 </p>
               </div>
               <div className="md:col-span-4 md:text-right">
                 <Link href="/zgloszenie" className="inline-flex min-h-14 items-center justify-center bg-graphite-950 px-6 font-bold text-white hover:bg-graphite-800">
-                  Otwórz formularz demo
+                  Przygotuj zgłoszenie
                 </Link>
               </div>
             </div>

@@ -9,7 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: `${siteBasePath}/`,
-        disallow: [`${siteBasePath}/zgloszenie`],
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,

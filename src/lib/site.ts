@@ -116,7 +116,7 @@ export const faqs = [
   {
     question: "Czy firma dojeżdża do klienta?",
     answer:
-      "Zakres i sposób realizacji trzeba ustalić telefonicznie. Publiczne źródła nie potwierdzają obecnie stałego serwisu mobilnego ani promienia dojazdu.",
+      "Możliwość dojazdu, lokalizację i sposób realizacji ustalamy telefonicznie dla konkretnego zlecenia.",
   },
 ] as const;
 

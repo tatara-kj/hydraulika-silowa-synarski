@@ -16,9 +16,9 @@ export default function AboutPage() {
     <>
       <PageHero
         current="O firmie"
-        eyebrow="Fakty zamiast sloganów"
+        eyebrow="Warsztat w Lubinicku"
         title="Hydraulika siłowa w Lubinicku"
-        intro="Na tej stronie oddzielamy potwierdzone dane firmy od informacji, które wymagają jeszcze rozmowy z właścicielem."
+        intro="Bezpośredni kontakt, rzeczowe rozpoznanie problemu i zakres prac dopasowany do konkretnego elementu."
       />
       <section className="px-5 py-20 md:px-6 md:py-28 lg:px-8">
         <div className="mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-12">
@@ -29,7 +29,7 @@ export default function AboutPage() {
               specjalizację w naprawach hydraulicznych oraz naprawie i produkcji
               siłowników hydraulicznych.
             </p>
-            <h2 className="mt-12 text-4xl">Potwierdzone podstawy komunikacji</h2>
+            <h2 className="mt-12 text-4xl">Główne obszary pracy</h2>
             <ul className="mt-7 grid gap-4">
               {[
                 "naprawy hydrauliczne",
@@ -78,18 +78,18 @@ export default function AboutPage() {
             {[
               {
                 icon: Building2,
-                title: "Zaplecze techniczne",
-                text: "Opis i fotografie wymagają danych oraz materiałów przekazanych przez właściciela.",
+                title: "Rozpoznanie zlecenia",
+                text: "Rozmowa zaczyna się od typu maszyny, objawów i identyfikacji elementu.",
               },
               {
                 icon: MapPin,
-                title: "Dojazd do klienta",
-                text: "Publiczne źródła nie potwierdzają stałego serwisu mobilnego ani promienia działania.",
+                title: "Dostarczenie i dojazd",
+                text: "Sposób przekazania elementu lub maszyny ustalamy indywidualnie podczas rozmowy.",
               },
               {
                 icon: FileCheck2,
-                title: "Realizacje i referencje",
-                text: "Nie publikujemy przypadków ani zdjęć bez potwierdzonego autorstwa, zgody i bezpiecznego opisu.",
+                title: "Dane techniczne",
+                text: "Oznaczenia, wymiary, dokumentacja i bezpiecznie wykonane zdjęcia pomagają przygotować dalszy krok.",
               },
             ].map((item) => (
               <article key={item.title} className="bg-offwhite-50 p-7 sm:p-9">

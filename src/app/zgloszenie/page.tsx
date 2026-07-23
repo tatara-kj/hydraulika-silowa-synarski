@@ -3,11 +3,11 @@ import { PageHero } from "@/components/page-hero";
 import { ServiceIntakeWizard } from "@/components/service-intake-wizard";
 
 export const metadata: Metadata = {
-  title: "Demonstracyjne zgłoszenie usterki",
+  title: "Przygotuj zgłoszenie usterki",
   description:
-    "Przygotuj lokalne podsumowanie objawów, danych maszyny, zdjęć i danych kontaktowych przed rozmową z serwisem. Formularz niczego nie wysyła.",
+    "Uporządkuj objawy, dane maszyny, zdjęcia i dane kontaktowe przed rozmową z serwisem hydrauliki siłowej.",
   alternates: { canonical: "/zgloszenie" },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 export default function IntakePage() {
@@ -15,11 +15,11 @@ export default function IntakePage() {
     <>
       <PageHero
         current="Zgłoszenie usterki"
-        eyebrow="Interaktywny formularz demo"
+        eyebrow="Kreator zgłoszenia"
         title="Przygotuj opis usterki"
-        intro="Przejdź przez sześć kroków i utwórz lokalne podsumowanie do rozmowy. Dane ani pliki nie są wysyłane do firmy."
+        intro="W sześciu krótkich krokach uporządkuj informacje potrzebne podczas rozmowy z warsztatem."
       />
-      <section className="px-5 py-16 md:px-6 md:py-24 lg:px-8">
+      <section className="section-bridge px-5 py-16 md:px-6 md:py-24 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <ServiceIntakeWizard />
         </div>
